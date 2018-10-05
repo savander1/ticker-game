@@ -2,9 +2,9 @@ using System;
 
 namespace Ticker.Entities.Repository
 {
-    public interface IRepository
+    public interface IRepository<T>
     {
-        IStock GetStock(string name);
-        void SetStock(IStock stock);
+        T Get(string name);
+        void Set(T stock);
     }
 }
