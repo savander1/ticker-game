@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Ticker.Entities;
+using Ticker.Logic.Observers;
 using Ticker.Logic.Subjects;
 
 namespace Ticker.Logic
@@ -13,12 +14,16 @@ namespace Ticker.Logic
         public MarketLogic(IList<IStock> stocks)
         {
             _stocks = stocks;
+            var market = new Market();
 
             foreach (var stock in _stocks)
             {
-                var observer = new StockObserver(_stocks)
+                var observer = new StockObserver(stock);
+                market.Subscribe(observer);
             }
         }
+
+        
     }
 
     public interface IMarketLogic
