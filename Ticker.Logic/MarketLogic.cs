@@ -23,7 +23,7 @@ namespace Ticker.Logic
             }
         }
 
-        
+
     }
 
     public interface IMarketLogic
