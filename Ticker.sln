@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ticker.Logic.Test", "Ticker
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ticker.Entities", "Ticker.Entities\Ticker.Entities.csproj", "{838762B7-607E-4A8C-88A5-89D7F51F14DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ticker.Client", "Ticker.Client\Ticker.Client.csproj", "{2072B8D6-4D04-4A8C-B953-F0792FECAE51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,5 +60,17 @@ Global
 		{838762B7-607E-4A8C-88A5-89D7F51F14DC}.Release|x64.Build.0 = Release|Any CPU
 		{838762B7-607E-4A8C-88A5-89D7F51F14DC}.Release|x86.ActiveCfg = Release|Any CPU
 		{838762B7-607E-4A8C-88A5-89D7F51F14DC}.Release|x86.Build.0 = Release|Any CPU
+		{2072B8D6-4D04-4A8C-B953-F0792FECAE51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2072B8D6-4D04-4A8C-B953-F0792FECAE51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2072B8D6-4D04-4A8C-B953-F0792FECAE51}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2072B8D6-4D04-4A8C-B953-F0792FECAE51}.Debug|x64.Build.0 = Debug|Any CPU
+		{2072B8D6-4D04-4A8C-B953-F0792FECAE51}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2072B8D6-4D04-4A8C-B953-F0792FECAE51}.Debug|x86.Build.0 = Debug|Any CPU
+		{2072B8D6-4D04-4A8C-B953-F0792FECAE51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2072B8D6-4D04-4A8C-B953-F0792FECAE51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2072B8D6-4D04-4A8C-B953-F0792FECAE51}.Release|x64.ActiveCfg = Release|Any CPU
+		{2072B8D6-4D04-4A8C-B953-F0792FECAE51}.Release|x64.Build.0 = Release|Any CPU
+		{2072B8D6-4D04-4A8C-B953-F0792FECAE51}.Release|x86.ActiveCfg = Release|Any CPU
+		{2072B8D6-4D04-4A8C-B953-F0792FECAE51}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
