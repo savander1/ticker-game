@@ -300,8 +300,7 @@ __pycache__/
 *.pyc
 
 # Cake - Uncomment if you are using it
- tools/**
- !tools/packages.config
+tools/
 
 # Tabs Studio
 *.tss
@@ -336,7 +335,3 @@ ASALocalRun/
 # Visual Studio Code
 code/*
 .vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
