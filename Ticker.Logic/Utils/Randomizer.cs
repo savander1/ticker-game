@@ -16,7 +16,7 @@ namespace Ticker.Logic.Utils
 
         public T GetRandomItemFrom<T>(IList<T> items)
         {
-            if (!items.Any()) return default(T);
+            if (items == null || !items.Any()) return default(T);
             var count = items.Count - 1;
             
             return count == 0 ? items[0] : items[_random.Next(count)];

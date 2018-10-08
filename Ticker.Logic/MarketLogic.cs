@@ -9,6 +9,7 @@ namespace Ticker.Logic
     public class MarketLogic
     {
         private readonly IMarketExecutor _executor;
+        private readonly IObservable<IStock> _market;
         private readonly IList<IStock> _stocks;
 
         public MarketLogic(IList<IStock> stocks)

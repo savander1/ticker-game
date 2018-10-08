@@ -32,8 +32,8 @@ namespace Ticker.Logic.Subjects
 
         private class Unsubscriber<IStock> : IDisposable
         {
-            private IList<IObserver<IStock>> _observers;
-            private IObserver<IStock> _observer;
+            private readonly IList<IObserver<IStock>> _observers;
+            private readonly IObserver<IStock> _observer;
 
             internal Unsubscriber(IList<IObserver<IStock>> observers, IObserver<IStock> observer)
             {
