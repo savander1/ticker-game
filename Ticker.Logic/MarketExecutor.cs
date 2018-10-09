@@ -1,19 +1,31 @@
 ﻿using System;
+using System.Collections.Generic;
 using Ticker.Entities;
 
 namespace Ticker.Logic
 {
     public class MarketExecutor : IMarketExecutor
     {
-        private readonly IObservable<IStock> _market;
+        private readonly IList<IStock> _stocks;
+        private readonly MarketSettings _settings;
+        private bool _started = false;
+        private bool _stopping = false;
 
-        public MarketExecutor(IObservable<IStock> market) 
+        public MarketExecutor(IList<IStock> stocks, MarketSettings settings) 
         {
-            _market = market;
+            _stocks = stocks;
+            _settings = settings;
         }
 
         public void Start()
         {
+            if (!_started)
+            {
+                _started = true;
+
+                    
+            }
+
         }
 
         public void Stop()
@@ -21,5 +33,10 @@ namespace Ticker.Logic
 
         }
 
+    }
+
+    public class MarketSettings
+    {
+        public int UpdateInterval {get;set;}
     }
 }
