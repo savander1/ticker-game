@@ -21,5 +21,10 @@ namespace Ticker.Logic.Utils
             
             return count == 0 ? items[0] : items[_random.Next(count)];
         }
+
+        public int GetRandomValue(int? max = null)
+        {
+            return max.HasValue ? _random.Next(max.Value) : _random.Next();
+        }
     }
 }
