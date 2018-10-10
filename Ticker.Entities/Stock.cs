@@ -2,7 +2,7 @@
 
 namespace Ticker.Entities
 {
-    public class Stock : IStock, IObservable<IStock>, IDisposable
+    public class Stock : IStock
     {
         private IObserver<IStock> _observer;
         private bool _disposing = false;
