@@ -1,4 +1,5 @@
 
+using System;
 using System.Collections.Generic;
 
 namespace Ticker.Logic.Utils
@@ -14,6 +15,8 @@ namespace Ticker.Logic.Utils
 
         public Dice(int maxDelta)
         {
+            if (maxDelta <= 0) throw new ArgumentOutOfRangeException(nameof(maxDelta));
+
             _maxDelta = maxDelta;
         }   
 
