@@ -8,26 +8,35 @@ Task("Clean")
   });
 
 Task("Restore")
-  .IsDependentOn("Clean")
   .Does(() =>
   {
     DotNetCoreRestore("");
   });
 
 Task("Build")
-  .IsDependentOn("Restore")
   .Does(() =>
   {
     DotNetCoreMSBuild();
   });
 
 Task("Test")
-  .IsDependentOn("Build")
   .Does(() => {
-    DotNetCoreTest("**/*.Test.csproj");
+    DotNetCoreTest("Ticker.Logic.Test/Ticker.Logic.Test.csproj", new DotNetCoreTestSettings{
+      NoBuild = true,
+      Logger = "Console",
+      NoRestore = true
+    });
   });
 
+Task("CIBuild")
+  .IsDependentOn("Clean")
+  .IsDependentOn("Restore")
+  .IsDependentOn("Build");
+
 Task("Default")
+  .IsDependentOn("Clean")
+  .IsDependentOn("Restore")
+  .IsDependentOn("Build")
   .IsDependentOn("Test");
 
 RunTarget(target);

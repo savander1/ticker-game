@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Ticker.Entities;
 using Ticker.Logic.Engine;
 using Ticker.Logic.Utils;
@@ -26,12 +27,14 @@ namespace Ticker.Logic
             _valuators = InitValuator(_stocks);
             _dice = new Dice(config.MaxDelta);
 
+            _timer = new Timer(() => Run());
+
 
         }
 
         public void Start()
         {
-            
+            _timer.Start();
         }
 
         public void Delete()
@@ -49,7 +52,16 @@ namespace Ticker.Logic
             return stockNames.Select(s => new Stock(s) { Value = initialValue } as IStock).ToList();
         }
 
-        private void Run
+        private void Run()
+        {
+            var tasks = new List<Task>();
+            foreach(var valuator in _valuators)
+            {
+                tasks.Add(new Task(() =>  valuator.UpdateValue(_dice)));
+            }
+
+            Task.WaitAll(tasks.ToArray());
+        }
 
     }
 }

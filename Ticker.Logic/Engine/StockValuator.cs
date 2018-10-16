@@ -1,5 +1,6 @@
 ﻿using Ticker.Logic.Utils;
 using Ticker.Entities;
+using System;
 
 namespace Ticker.Logic
 {
@@ -13,11 +14,13 @@ namespace Ticker.Logic
         private readonly IStock _stock;
         public StockValuator(IStock stock)
         {
-            _stock = stock;
+            _stock = stock ?? throw new ArgumentNullException(nameof(stock));
         }
 
         public void UpdateValue(IDice dice)
         {
+            if (dice == null) throw new ArgumentNullException(nameof(dice));
+            
             var delta = dice.RollDice();
             _stock.Value += delta;
         }

@@ -19,6 +19,8 @@ namespace Ticker.Logic.Engine
 
         public Timer(Action action)
         {
+            if (action == null) throw new ArgumentNullException(nameof(action));
+
             _timer = new System.Timers.Timer(ONE_SECOND);
             _timer.Elapsed += (sender, e) => action();
         }
