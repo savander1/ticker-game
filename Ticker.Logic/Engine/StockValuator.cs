@@ -1,11 +1,14 @@
-﻿using System;
-using Ticker.Logic.Utils;
+﻿using Ticker.Logic.Utils;
 using Ticker.Entities;
-using System.Collections.Generic;
 
 namespace Ticker.Logic
 {
-    public class StockValuator
+    public interface IStockValuator
+    {
+        void UpdateValue(IDice dice);
+    }
+
+    public class StockValuator : IStockValuator
     {
         private readonly IStock _stock;
         public StockValuator(IStock stock)

@@ -9,7 +9,7 @@ namespace Ticker.Logic.Utils
         decimal RollDice();
     }
 
-    public class Dice
+    public class Dice : IDice
     {
         private readonly int _maxDelta;
 

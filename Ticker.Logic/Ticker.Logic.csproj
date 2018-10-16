@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <Compile Remove="IMarketExecutor.cs" />
+    <Compile Remove="Engine\IStockValuator.cs" />
   </ItemGroup>
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
