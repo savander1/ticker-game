@@ -24,7 +24,7 @@ namespace Ticker.Logic.Utils
         }
         public T Deserialize<T>() where T : class
         {
-            using (var stream = new FileStream(_path, FileMode.Create, FileAccess.Write))
+            using (var stream = new FileStream(_path, FileMode.Open, FileAccess.Read))
             {
                 var formatter = new BinaryFormatter();
                 return formatter.Deserialize(stream) as T;
