@@ -24,7 +24,8 @@ Task("Test")
     DotNetCoreTest("Ticker.Logic.Test/Ticker.Logic.Test.csproj", new DotNetCoreTestSettings{
       NoBuild = true,
       Logger = "Console",
-      NoRestore = true
+      NoRestore = true,
+      Filter = "TestCategory!=Integration"
     });
   });
 
