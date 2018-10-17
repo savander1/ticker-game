@@ -10,6 +10,7 @@ namespace Ticker.Logic.Engine
     {
         void Start();
         void Stop();
+        bool Running();
     }
 
     public class Timer : ITimer, IDisposable
@@ -33,6 +34,11 @@ namespace Ticker.Logic.Engine
         public void Stop()
         {
             _timer.Enabled = false;
+        }
+
+        public bool Running()
+        {
+            return _timer.Enabled;
         }
 
         private bool _disposing;

@@ -10,13 +10,18 @@ namespace Ticker.Logic
 {
     public class Game
     {
-        private readonly IList<IStock> _stocks;
+        private IList<IStock> _stocks;
         private readonly IList<IStockValuator> _valuators;
         private readonly IDice _dice;
         private readonly ITimer _timer;
+        private readonly ISerializer _serializer;
 
         public Game(GameConfig config)
         {
+            _dice = new Dice(config.MaxDelta);
+            _timer = new Timer(() => Run());
+            _serializer = new Serializer(config.SerializerConfig);
+
             if (config.Type == GameConfig.LoadType.New)
             {
                 _stocks = InitStocks(config.StockNames, config.InitialValue);
@@ -25,16 +30,35 @@ namespace Ticker.Logic
             if (_stocks == null) throw new InvalidOperationException("Invalid Load Type");
 
             _valuators = InitValuator(_stocks);
-            _dice = new Dice(config.MaxDelta);
-
-            _timer = new Timer(() => Run());
-
-
+            
         }
 
         public void Start()
         {
+            // add list of client observers
             _timer.Start();
+        }
+
+        public void Save()
+        {
+            var inPlay = _timer.Running();
+            if (inPlay)
+            {
+                _timer.Stop();
+            }
+
+            _serializer.Serialize(_stocks);
+
+            if (inPlay)
+            {
+                _timer.Start();
+            }
+        }
+
+
+        public void Load()
+        {
+            _stocks = _serializer.Deserialize<IList<IStock>>();
         }
 
         public void Delete()
