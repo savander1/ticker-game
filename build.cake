@@ -1,4 +1,4 @@
-#tool "nuget:?package=Microsoft.TestPlatform&version=15.7.0"
+#tool "nuget:?package=Microsoft.TestPlatform"
 
 var target = Argument("target", "Default");
 
@@ -23,14 +23,8 @@ Task("Build")
 
 Task("Test")
   .Does(() => {
-    // DotNetCoreTest("Ticker.Logic.Test/Ticker.Logic.Test.csproj", new DotNetCoreTestSettings{
-    //   NoBuild = true,
-    //   Logger = "Console",
-    //   NoRestore = true,
-    //   Filter = "TestCategory!=Integration"
-    // });
     var testSettings = new VSTestSettings{
-        ToolPath        = Context.Tools.Resolve("vstest.console.exe"),
+        ToolPath = Context.Tools.Resolve("vstest.console.exe"),
     }.WithLogger("Console");
     VSTest("./Ticker.Logic.Test/bin/Debug/netcoreapp2.1/Ticker.Logic.Test.dll", testSettings);
   });
