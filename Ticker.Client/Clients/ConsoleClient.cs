@@ -1,6 +1,6 @@
 namespace Ticker.Client
 {
-    public class ConsoleClient
+    public class ConsoleClient : Client
     {
 
     }

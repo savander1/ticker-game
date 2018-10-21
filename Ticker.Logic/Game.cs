@@ -62,7 +62,7 @@ namespace Ticker.Logic
 
         public void Delete()
         {
-            
+            _serializer.Delete();
         }
 
         private IList<IStockValuator> InitValuator(IList<IStock> stocks)
