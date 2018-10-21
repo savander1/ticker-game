@@ -22,12 +22,17 @@ namespace Ticker.Logic
             _timer = new Timer(() => Run());
             _serializer = new Serializer(config.SerializerConfig);
 
-            if (config.Type == GameConfig.LoadType.New)
+            switch (config.Type)
             {
-                _stocks = InitStocks(config.StockNames, config.InitialValue);
+                case GameConfig.LoadType.Load:
+                    _stocks = _serializer.Deserialize<IList<IStock>>();
+                    break;
+                case GameConfig.LoadType.New:
+                    _stocks = InitStocks(config.StockNames, config.InitialValue);
+                    break;
+                default:
+                    throw new InvalidOperationException("Invalid Load Type");
             }
-
-            if (_stocks == null) throw new InvalidOperationException("Invalid Load Type");
 
             _valuators = InitValuator(_stocks);
             
@@ -53,12 +58,6 @@ namespace Ticker.Logic
             {
                 _timer.Start();
             }
-        }
-
-
-        public void Load()
-        {
-            _stocks = _serializer.Deserialize<IList<IStock>>();
         }
 
         public void Delete()

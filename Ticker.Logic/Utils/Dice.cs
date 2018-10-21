@@ -1,4 +1,3 @@
-
 using System;
 using System.Collections.Generic;
 
@@ -29,11 +28,11 @@ namespace Ticker.Logic.Utils
             var dir = randomizer.GetRandomItemFrom(directions);
             var prep = randomizer.GetRandomItemFrom(prepostions);
 
-            var dec = randomizer.GetRandomValue(99) / 100;
+            var dec = randomizer.GetRandomValue(99) / 100M;
 
             if (prep == Preposition.Over)
             {
-                dec += randomizer.GetRandomValue(_maxDelta - 1);
+                dec += randomizer.GetRandomValue(_maxDelta);
             }
 
             if (dir == Direction.Down)

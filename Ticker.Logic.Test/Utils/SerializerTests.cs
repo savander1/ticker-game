@@ -22,10 +22,9 @@ namespace Ticker.Logic.Test.Utils
             var id = Guid.NewGuid();
             try
             {
-                var config = new SerializerConfig
+                var config = new SerializerConfig(id)
                 {
-                    SerializerPath = AppContext.BaseDirectory,
-                    Id = id
+                    SerializerPath = AppContext.BaseDirectory
                 };
 
                 var boo = "boo";
@@ -36,6 +35,10 @@ namespace Ticker.Logic.Test.Utils
                 var result = serializer.Deserialize<string>();
 
                 Assert.AreEqual(boo, result);
+
+                serializer.Delete();
+
+                Assert.IsFalse(File.Exists(config.FilePath));
             }
             catch (Exception ex)
             {

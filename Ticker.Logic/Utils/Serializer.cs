@@ -1,9 +1,6 @@
 using System;
-using System.Collections.Generic;
-using Ticker.Entities;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Runtime.Serialization;
 using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Ticker.Logic.Utils
 {
@@ -11,6 +8,7 @@ namespace Ticker.Logic.Utils
     {
         void Serialize<T>(T t) where T : class;
         T Deserialize<T>() where T : class;
+        void Delete();
     }
 
     public class Serializer : ISerializer
@@ -20,7 +18,7 @@ namespace Ticker.Logic.Utils
         {
             if (config == null) throw new ArgumentNullException(nameof(config));
 
-            _path = Path.Combine(config.SerializerPath, config.Id.ToString());
+            _path = config.FilePath;
         }
         public T Deserialize<T>() where T : class
         {
@@ -38,6 +36,11 @@ namespace Ticker.Logic.Utils
                 var formatter = new BinaryFormatter();
                 formatter.Serialize(stream, t);
             }
+        }
+
+        public void Delete()
+        {
+            File.Delete(_path);
         }
     }
 }
