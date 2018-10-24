@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using Ticker.Entities.Exception;
 
 namespace Ticker.Entities
 {
-    public class Player
+    public class Player : ISerializable
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
@@ -59,6 +60,14 @@ namespace Ticker.Entities
                 throw new InsufficientCapitalException();
             
             Capital -= cost;
+        }
+
+        public void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            info.AddValue(nameof(this.Id), Id);
+            info.AddValue(nameof(this.Name), Name);
+            info.AddValue(nameof(this.Capital), Capital);
+            info.AddValue(nameof(this.Stocks), Stocks);
         }
     }
 }
