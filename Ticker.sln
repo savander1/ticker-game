@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ticker.Logic", "Ticker.Logic\Ticker.Logic.csproj", "{52830126-FDEC-4C88-9667-A0D0E2645792}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ticker.Logic.Test", "Ticker.Logic.Test\Ticker.Logic.Test.csproj", "{DB264E4E-7CCD-44A8-9C69-2A5D84F84D9A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ticker.Test", "Ticker.Test\Ticker.Test.csproj", "{DB264E4E-7CCD-44A8-9C69-2A5D84F84D9A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ticker.Entities", "Ticker.Entities\Ticker.Entities.csproj", "{838762B7-607E-4A8C-88A5-89D7F51F14DC}"
 EndProject

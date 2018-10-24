@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Ticker.Logic.Engine;
 using Timer = Ticker.Logic.Engine.Timer;
 
-namespace Ticker.Logic.Test.Engine
+namespace Ticker.Test.Logic.Engine
 {
     [TestClass]
     public class TimerTests
