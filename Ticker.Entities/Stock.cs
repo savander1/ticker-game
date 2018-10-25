@@ -65,7 +65,7 @@ namespace Ticker.Entities
             {
                 if (disposing)
                 {
-                    Dispose();
+
                 }
 
                 _disposing = true;

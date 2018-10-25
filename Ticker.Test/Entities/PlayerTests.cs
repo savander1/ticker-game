@@ -80,5 +80,70 @@ namespace Ticker.Test.Entities
             Assert.AreEqual(5, player.Stocks[stock]);
             Assert.AreEqual(1M, player.Capital);
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void SellStock_NullPassed_ThrowsException()
+        {
+            var player = new Player();
+            player.SellStock(null);
+        }
+
+        [DataTestMethod]
+        [DataRow(0)]
+        [DataRow(-1)]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void SellStock_InvalidQuantityPassed_ThrowsException(int quantity)
+        {
+            var stock = new Stock(StockName){ Value = 1M };
+            var player = new Player 
+            { 
+                Capital = 2M,
+                Stocks = new Dictionary<IStock, int>
+                {
+                    { stock, 4 }
+                }
+            };
+
+            player.SellStock(stock, quantity);
+        }
+
+        [TestMethod]
+        public void SellStock_InvalidPassed_PlayerNotChanged()
+        {
+            var stock = new Stock(StockName){ Value = 1M };
+            var player = new Player 
+            { 
+                Capital = 2M,
+                Stocks = new Dictionary<IStock, int>
+                {
+                    { stock, 4 }
+                }
+            };
+
+            var capital = player.Capital;
+
+            player.SellStock(new Stock("Not The Same"));
+
+            Assert.AreEqual(capital, player.Capital);
+        }
+
+        [TestMethod]
+        public void SellStock_ValidStockPassed_PlayerUpdatedAsExpected()
+        {
+            var stock = new Stock(StockName){ Value = 1M };
+            var player = new Player 
+            { 
+                Capital = 2M,
+                Stocks = new Dictionary<IStock, int>
+                {
+                    { stock, 4 }
+                }
+            };
+
+            player.SellStock(stock, 2);
+            Assert.AreEqual(4, player.Capital);
+            Assert.AreEqual(2, player.Stocks[stock]);
+        }
     }
 }
