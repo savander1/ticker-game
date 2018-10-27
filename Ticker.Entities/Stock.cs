@@ -34,6 +34,21 @@ namespace Ticker.Entities
             Name = name;
         }
 
+        public override bool Equals(object obj)
+        {
+            var other = obj as Stock;
+            if (other != null)
+            {
+                return other.Name == Name;
+            }
+            return false;
+        }
+
+        public override int GetHashCode()
+        {
+            return Name.GetHashCode();
+        }
+
         public void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             info.AddValue(nameof(this.Name), Name);
@@ -51,7 +66,7 @@ namespace Ticker.Entities
             {
                 if (disposing)
                 {
-                    Dispose();
+
                 }
 
                 _disposing = true;

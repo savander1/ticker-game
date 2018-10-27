@@ -2,9 +2,10 @@ using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using Ticker.Entities;
+using Ticker.Logic;
 using Ticker.Logic.Utils;
 
-namespace Ticker.Logic.Test.Engine
+namespace Ticker.Test.Logic.Engine
 {
     [TestClass]
     public class StockValuatorTests

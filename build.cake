@@ -25,8 +25,9 @@ Task("Test")
   .Does(() => {
     var testSettings = new VSTestSettings{
         ToolPath = Context.Tools.Resolve("vstest.console.exe"),
+        Parallel = true
     }.WithLogger("Console");
-    VSTest("./Ticker.Logic.Test/bin/Debug/netcoreapp2.1/Ticker.Logic.Test.dll", testSettings);
+    VSTest("./Ticker.Test/bin/Debug/netcoreapp2.1/Ticker.Test.dll", testSettings);
   });
 
 Task("CIBuild")

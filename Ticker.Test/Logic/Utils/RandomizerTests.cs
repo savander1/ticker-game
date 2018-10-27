@@ -4,7 +4,7 @@ using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Ticker.Logic.Utils;
 
-namespace Ticker.Logic.Test.Utils
+namespace Ticker.Test.Logic.Utils
 {
     [TestClass]
     public class RandomizerTests

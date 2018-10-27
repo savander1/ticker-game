@@ -1,9 +1,10 @@
 using System;
 using System.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Ticker.Logic;
 using Ticker.Logic.Utils;
 
-namespace Ticker.Logic.Test.Utils
+namespace Ticker.Test.Logic.Utils
 {
     [TestClass]
     public class SerializerTests
