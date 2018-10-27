@@ -9,6 +9,7 @@ namespace Ticker.Entities
         private IObserver<IStock> _observer;
         private bool _disposing = false;
         private decimal _value;
+        public int Quantity { get; set; }
         public string Name { get; }
         public decimal Value 
         { 

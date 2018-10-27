@@ -8,6 +8,7 @@ namespace Ticker.Logic
         public IList<string> StockNames { get; set; }
         public int InitialValue { get; set; }
         public int MaxDelta { get; set; }
+        public int SplitValue { get; set; }
         public SerializerConfig SerializerConfig { get; set; }
 
         public enum LoadType

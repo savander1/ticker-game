@@ -32,7 +32,7 @@ namespace Ticker.Logic.Utils
 
             if (prep == Preposition.Over)
             {
-                dec += randomizer.GetRandomValue(_maxDelta);
+                dec += randomizer.GetRandomValue(_maxDelta-1);
             }
 
             if (dir == Direction.Down)
