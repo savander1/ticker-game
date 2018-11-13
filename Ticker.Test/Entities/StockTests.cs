@@ -54,8 +54,17 @@ namespace Ticker.Test.Entities
         [TestMethod]
         public void ValueSet_StockHasObserver_ObserverNotified()
         {
+            Stock observed = null;
             var observer = new Mock<IObserver<IStock>>();
+            observer.Setup(x => x.OnNext(It.IsAny<IStock>())).Callback<IStock>((s) => observed = s as Stock);
             var stock = new Stock("A") { Value = 1 };
+            stock.Subscribe(observer.Object);
+
+            stock.Value = 2;
+
+            observer.Verify(x => x.OnNext(It.IsAny<IStock>()), Times.Once);
+            Assert.AreEqual(2, observed.Value);
+            Assert.AreEqual(2, stock.Value);
         }
     }
 }

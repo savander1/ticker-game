@@ -27,7 +27,7 @@ namespace Ticker.Logic.Observers
         public void OnNext(IStock value)
         {
             Stock = value;
-            // send value to client
+            
             
         }
     }
