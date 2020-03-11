@@ -4,7 +4,18 @@ Just a bunch of random notes about how to organize and play this game:
 1. Create company avatars for stocks.
 1. Players choose a quantity of stock at a certain value and keep that.
 1. The game should be either turn based, or it could also be client/server/multiplayer or have both modes.
-
+1. Stocks should move up and down on a set clock
+    1. The stock movement should be determined by the following:
+        > Level 1 Avatars {Stocks, Bonds, Commodities}
+        >
+        > Level 2 Avatars { Technology, Finance, Food & Beverage, Manufacturing}, {Municipal, Corporate}, {Metals, Energy, Livestock & Meat, Agricultural}}
+        >
+        > Level 3 Avatars -> this will include the individual avatars for each Level 2 avatar.
+    1. At each level there is a random Up/Down "role of the dice"
+    1. At each level a multiplier is calculated using this algorithm
+        > Given a random decimal _r_ where 0 &gt; _r_ &lt; 1
+        >
+        > multiplier = 
 # Company Avatars
 ## Stocks
 ### Technology
@@ -14,7 +25,7 @@ Just a bunch of random notes about how to organize and play this game:
 
 ## Bonds
 ### Municipal
-### CorporaOBte
+### Corporate
 
 ## Commodity
 ### Metals 
