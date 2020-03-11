@@ -1,3 +1,5 @@
+# Abandoned, but not forgotten 
+
 # ticker-game
 
 [![Build status](https://ci.appveyor.com/api/projects/status/p8eftpux4q962kkh?svg=true)](https://ci.appveyor.com/project/savander1/ticker-game)
