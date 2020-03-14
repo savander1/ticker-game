@@ -8,15 +8,17 @@ Just a bunch of random notes about how to organize and play this game:
     1. The stock movement should be determined by the following:
         > Level 1 Avatars {Stocks, Bonds, Commodities}
         >
-        > Level 2 Avatars { Technology, Finance, Food & Beverage, Manufacturing}, {Municipal, Corporate}, {Metals, Energy, Livestock & Meat, Agricultural}}
+        > Level 2 Avatars { Technology, Finance, Food & Beverage, Manufacturing}, {Government, Corporate}, {Metals, Energy, Livestock & Meat, Agricultural}}
         >
         > Level 3 Avatars -> this will include the individual avatars for each Level 2 avatar.
     1. At each level there is a random Up/Down "role of the dice"
+    1. Each level 3 avatar has a risk quotient represented by a decimal _q_ where 1 &geq; _r_ &lt; 2
     1. At each level a multiplier is calculated using this algorithm
         > Given a random decimal _r_ where 0 &gt; _r_ &lt; 1
         >
-        > multiplier = 
-# Company Avatars
+        > multiplier = risk quotient * 
+# Entity Avatars
+
 ## Stocks
 ### Technology
 ### Finance
@@ -24,8 +26,13 @@ Just a bunch of random notes about how to organize and play this game:
 ### Manufacturing
 
 ## Bonds
-### Municipal
-### Corporate
+### Government
+- Treasury 
+- Federal
+- Municipal
+### Corporate 
+- Mortgage
+
 
 ## Commodity
 ### Metals 
