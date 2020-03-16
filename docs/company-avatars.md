@@ -49,3 +49,7 @@ Just a bunch of random notes about how to organize and play this game:
 - Oranges
 - Sugar
 - Soybeans
+
+## Entity Chart
+|| Level 1 || Level 2 || Level 3 || Risk Quotient ||
+| Stock | Technology |||
