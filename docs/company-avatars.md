@@ -51,6 +51,7 @@ Just a bunch of random notes about how to organize and play this game:
 - Soybeans
 
 ## Entity Chart
-| Level 1 | Level 2 | Level 3 | Risk Quotient |
-| --- | --- | ___ | ___ |
-| Stock | Technology | | |
+<table>
+<tr><th>Level 1</th><th>Level 2</th><th>Level 3</th><th>Risk Quotient</th></tr>
+<tr><td>Stock</td><td>Technology</td><td></td><td></td></tr>
+</table>
