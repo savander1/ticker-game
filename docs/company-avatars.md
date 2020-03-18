@@ -54,6 +54,12 @@ Just a bunch of random notes about how to organize and play this game:
 <table>
 <tr><th>Level 1</th><th>Level 2</th><th>Level 3</th><th>Risk Quotient</th></tr>
 <tr><td>Stock</td><td>Technology</td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td></tr>
+<tr><td>Bonds</td><td>Government</td><td>Treasury</td><td></td></tr>
+<tr><td>Bonds</td><td>Government</td><td>Federal</td><td></td></tr>
+<tr><td>Bonds</td><td>Government</td><td>Municipal</td><td></td></tr>
+<tr><td>Bonds</td><td>Corporate</td><td>Mortgage</td><td></td></tr>
 <tr><td>Commodity</td><td>Metals</td><td>Gold</td><td></td></tr>
 <tr><td>Commodity</td><td>Metals</td><td>Silver</td><td></td></tr>
 <tr><td>Commodity</td><td>Metals</td><td>Copper</td><td></td></tr>
@@ -64,10 +70,4 @@ Just a bunch of random notes about how to organize and play this game:
 <tr><td>Commodity</td><td>Agricultural</td><td>Oranges</td><td></td></tr>
 <tr><td>Commodity</td><td>Agricultural</td><td>Sugar</td><td></td></tr>
 <tr><td>Commodity</td><td>Agricultural</td><td>Soybeans</td><td></td></tr>
-<tr><td></td><td></td><td></td><td></td></tr>
-<tr><td></td><td></td><td></td><td></td></tr>
-<tr><td></td><td></td><td></td><td></td></tr>
-<tr><td></td><td></td><td></td><td></td></tr>
-<tr><td></td><td></td><td></td><td></td></tr>
-<tr><td></td><td></td><td></td><td></td></tr>
 </table>
