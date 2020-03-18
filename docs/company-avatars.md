@@ -6,11 +6,11 @@ Just a bunch of random notes about how to organize and play this game:
 1. The game should be either turn based, or it could also be client/server/multiplayer or have both modes.
 1. Stocks should move up and down on a set clock
     1. The stock movement should be determined by the following:
-        > Level 1 Avatars {Stocks, Bonds, Commodities}
-        >
-        > Level 2 Avatars { Technology, Finance, Food & Beverage, Manufacturing}, {Government, Corporate}, {Metals, Energy, Livestock & Meat, Agricultural}}
-        >
-        > Level 3 Avatars -> this will include the individual avatars for each Level 2 avatar.
+        <pre> Level 1 Avatars {Stocks, Bonds, Commodities}
+        Level 2 Avatars { Technology, Finance, Food & Beverage, Manufacturing}, {Government, Corporate}, {Metals, Energy, Livestock & Meat, Agricultural}}
+        
+         Level 3 Avatars -> this will include the individual avatars for each Level 2 avatar.
+       </pre>
     1. At each level there is a random Up/Down "role of the dice"
     1. Each level 3 avatar has a risk quotient represented by a decimal _q_ where 1 &geq; _r_ &lt; 2
     1. At each level a multiplier is calculated using this algorithm
@@ -54,4 +54,20 @@ Just a bunch of random notes about how to organize and play this game:
 <table>
 <tr><th>Level 1</th><th>Level 2</th><th>Level 3</th><th>Risk Quotient</th></tr>
 <tr><td>Stock</td><td>Technology</td><td></td><td></td></tr>
+<tr><td>Commodity</td><td>Metals</td><td>Gold</td><td></td></tr>
+<tr><td>Commodity</td><td>Metals</td><td>Silver</td><td></td></tr>
+<tr><td>Commodity</td><td>Metals</td><td>Copper</td><td></td></tr>
+<tr><td>Commodity</td><td>Metals</td><td>Platinum</td><td></td></tr>
+<tr><td>Commodity</td><td>Energy</td><td>Oil</td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td></tr>
 </table>
