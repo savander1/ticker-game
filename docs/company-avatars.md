@@ -59,11 +59,11 @@ Just a bunch of random notes about how to organize and play this game:
 <tr><td>Commodity</td><td>Metals</td><td>Copper</td><td></td></tr>
 <tr><td>Commodity</td><td>Metals</td><td>Platinum</td><td></td></tr>
 <tr><td>Commodity</td><td>Energy</td><td>Oil</td><td></td></tr>
-<tr><td>Commodity</td>Livestock & Meat<td></td>Cattle<td></td><td></td></tr>
-<tr><td>Commodity</td>Livestock & Meat<td></td>Pork<td></td><td></td></tr>
-<tr><td>Commodity</td>Agricultural<td></td><td>Oranges</td><td></td></tr>
-<tr><td>Commodity</td>Agricultural<td></td><td>Sugar</td><td></td></tr>
-<tr><td>Commodity</td>Agricultural<td></td><td>Soybeans</td><td></td></tr>
+<tr><td>Commodity</td><td>Livestock & Meat</td><td>Cattle</td><td></td></tr>
+<tr><td>Commodity</td><td>Livestock & Meat</td><td>Pork</td><td></td></tr>
+<tr><td>Commodity</td><td>Agricultural</td><td>Oranges</td><td></td></tr>
+<tr><td>Commodity</td><td>Agricultural</td><td>Sugar</td><td></td></tr>
+<tr><td>Commodity</td><td>Agricultural</td><td>Soybeans</td><td></td></tr>
 <tr><td></td><td></td><td></td><td></td></tr>
 <tr><td></td><td></td><td></td><td></td></tr>
 <tr><td></td><td></td><td></td><td></td></tr>
