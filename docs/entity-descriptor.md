@@ -57,6 +57,9 @@ Just a bunch of random notes about how to organize and play this game:
 <tr><td>Stock</td><td>Finance</td><td></td><td></td></tr>
 <tr><td>Stock</td><td>Food & Beverage</td><td></td><td></td></tr>
 <tr><td>Stock</td><td>Manufacturing</td><td></td><td></td></tr>
+<tr><td>Bonds</td><td>Government</td><td>Treasury</td><td></td></tr>
+<tr><td>Bonds</td><td>Government</td><td>Federal</td><td></td></tr>
+<tr><td>Bonds</td><td>Government</td><td>Municipal</td><td></td></tr>
 <tr><td>Bonds</td><td>Corporate</td><td>Mortgage</td><td></td></tr>
 <tr><td>Commodity</td><td>Metals</td><td>Gold</td><td></td></tr>
 <tr><td>Commodity</td><td>Metals</td><td>Silver</td><td></td></tr>
